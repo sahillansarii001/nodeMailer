@@ -34,7 +34,12 @@ app.post("/send-email", (req, res) => {
       <p>This is a test email sent using nodemailer</p>
       <img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google Logo' />
       <a href='https://www.google.com'>Visit Google</a>`,
-      attachments: [{filename: "keyboard-shortcuts-windows.pdf", path: "./keyboard-shortcuts-windows.pdf" }],
+      attachments: [
+        {
+          filename: "keyboard-shortcuts-windows.pdf",
+          path: "./keyboard-shortcuts-windows.pdf",
+        },
+      ],
     };
 
     const info = transporter.sendMail(mailOptions);
